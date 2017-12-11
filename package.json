@@ -1,0 +1,21 @@
+{
+  "name": "top-royale",
+  "version": "0.1",
+  "description": "a nice stuff to play clash royale",
+  "main": "index.js",
+  "author": "Paulo Guedes",
+  "license": "None",
+  "scripts": {
+    "start": "webpack-dev-server -d --config webpack.config.js --progress --colors",
+    "test": "echo \"No test nois que ta\" && exit 1"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^3.10.0"
+  }
+}
