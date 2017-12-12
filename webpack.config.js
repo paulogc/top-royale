@@ -1,11 +1,9 @@
 const path = require('path');
 
 const config = {
-  entry: ['./src/i*ndex.js', 
-    'webpack-dev-server/client?http://localhost:8080',
-  ],
+  entry: ['./src/index.js'],
   output: {
-    path: path.resolve(__diename, 'build'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
     publicPath: 'build',
   },
