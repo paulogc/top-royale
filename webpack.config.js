@@ -1,11 +1,11 @@
 const path = require('path');
 
 const config = {
-  entry: ['./src/index.js'],
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
-    publicPath: 'build',
+    publicPath: 'build/',
   },
   resolve: {
     modules: [
@@ -16,21 +16,13 @@ const config = {
   },
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        exclude: [/node_modules/],
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
+      { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: "babel-loader" }
     ]
   },
   devServer: {
-    port: 8081,
-    historyApiFallback: true,
+    port: 3000,
+    contentBase: __dirname,
+    historyApiFallback: true
   }
 };
 
