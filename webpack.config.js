@@ -30,13 +30,15 @@ const config = {
         options: {
           emitWarning: true,
         },
-      }
-    ],
-    loaders: [
-      {
-        test: /\.html$/,
-        loader: 'html-loader'
       },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+      }
     ],
   },
   plugins: [

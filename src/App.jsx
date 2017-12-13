@@ -1,7 +1,9 @@
 import React from 'react';
 
+import './App.css';
+
 const App = () => (
-  <div>
+  <div className="app-example">
     Hello world!!!!
   </div>
 );
