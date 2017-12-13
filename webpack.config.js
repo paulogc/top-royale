@@ -15,21 +15,27 @@ const config = {
     extensions: ['.js', '.jsx']
   },
   module: {
-    // preLoaders: [
-    //   {
-    //     test: /\.(js|jsx)$/,
-    //     loader: 'eslint-loader',
-    //     exclude: 'node_modules'
-    //   }
-    // ],
     rules: [
-      { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: "babel-loader" }
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      },
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/,
+        enforce: 'pre',
+        options: {
+          emitWarning: true,
+        },
+      }
     ],
     loaders: [
       {
         test: /\.html$/,
         loader: 'html-loader'
-      }
+      },
     ],
   },
   plugins: [
