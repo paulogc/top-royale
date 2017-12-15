@@ -8,5 +8,8 @@
   "extends": ["airbnb"],
   "globals": {
     "module": true
+  },
+  "rules": {
+    "import/no-named-as-default": 0
   }
 }

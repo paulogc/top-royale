@@ -1,11 +1,17 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+
+import Increment from './components/Increment';
+import store from './store';
 
 import './App.css';
 
 const App = () => (
-  <div className="app-example">
-    Hello world!!!!
-  </div>
+  <Provider store={store}>
+    <div className="app-example">
+      <Increment />
+    </div>
+  </Provider>
 );
 
 export default App;
