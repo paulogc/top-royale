@@ -6,12 +6,15 @@ export default function incrementReducer(
   state = INITIAL_STATE,
   action,
 ) {
-  console.log('oio', action);
   switch (action.type) {
     case INCREMENT:
-      return state.number + action.payload;
+      return {
+        number: state.number + action.payload.number,
+      };
     case DECREMENT:
-      return state.number - action.payload;
+      return {
+        number: state.number - action.payload.number,
+      };
     default:
       return state;
   }

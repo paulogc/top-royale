@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { increment } from '../actions/incrementActions';
+import { increment, decrement } from '../actions/incrementActions';
 
-const mapState = (state) => {
-  console.log(state);
-  return state.incrementReducer;
-};
+const mapState = state => state.incrementReducer;
 
 const Increment = props => (
   <div>
     {props.number}
-    <button onClick={props.onIncrement}>
+    <button onClick={() => props.onIncrement(10)}>
       Add
+    </button>
+    <button onClick={() => props.onDecrement(10)}>
+      Remove
     </button>
   </div>
 );
@@ -21,16 +21,19 @@ const Increment = props => (
 Increment.propTypes = {
   number: PropTypes.number,
   onIncrement: PropTypes.func,
+  onDecrement: PropTypes.func,
 };
 
 Increment.defaultProps = {
   number: 0,
-  onIncrement: () => { console.log('hu'); },
+  onIncrement: () => {},
+  onDecrement: () => {},
 };
 
 export default connect(
   mapState,
-  () => ({
-    onIncrement: () => increment(10),
-  }),
+  {
+    onIncrement: increment,
+    onDecrement: decrement,
+  },
 )(Increment);
