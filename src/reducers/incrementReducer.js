@@ -1,6 +1,6 @@
 import { INCREMENT, DECREMENT } from '../actions/incrementActions';
 
-const INITIAL_STATE = { number: 10 };
+export const INITIAL_STATE = { number: 0 };
 
 export default function incrementReducer(
   state = INITIAL_STATE,

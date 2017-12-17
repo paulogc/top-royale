@@ -5,10 +5,13 @@
     "node": false,
     "jest": true
   },
-  "extends": ["airbnb"],
+  "extends": ["airbnb", "plugin:jest/recommended"],
   "globals": {
     "module": true
   },
+  "plugins": [
+    "jest"
+  ],
   "rules": {
     "import/no-named-as-default": 0
   }

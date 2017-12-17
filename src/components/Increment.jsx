@@ -20,14 +20,12 @@ const Increment = props => (
 
 Increment.propTypes = {
   number: PropTypes.number,
-  onIncrement: PropTypes.func,
-  onDecrement: PropTypes.func,
+  onIncrement: PropTypes.func.isRequired,
+  onDecrement: PropTypes.func.isRequired,
 };
 
 Increment.defaultProps = {
   number: 0,
-  onIncrement: () => {},
-  onDecrement: () => {},
 };
 
 export default connect(
