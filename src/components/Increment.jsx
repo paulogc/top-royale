@@ -4,15 +4,17 @@ import { connect } from 'react-redux';
 
 import { increment, decrement } from '../actions/incrementActions';
 
+import styles from './Increment.css';
+
 const mapState = state => state.incrementReducer;
 
 const Increment = props => (
-  <div>
+  <div className={styles.container}>
     {props.number}
-    <button onClick={() => props.onIncrement(10)}>
+    <button className={styles.button} onClick={() => props.onIncrement(10)}>
       Add
     </button>
-    <button onClick={() => props.onDecrement(10)}>
+    <button className={styles.button} onClick={() => props.onDecrement(10)}>
       Remove
     </button>
   </div>

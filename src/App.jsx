@@ -4,11 +4,9 @@ import { Provider } from 'react-redux';
 import Increment from './components/Increment';
 import store from './store';
 
-import './App.css';
-
 const App = () => (
   <Provider store={store}>
-    <div className="app-example">
+    <div>
       <Increment />
     </div>
   </Provider>
