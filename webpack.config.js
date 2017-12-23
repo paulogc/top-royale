@@ -55,7 +55,19 @@ const config = {
           },
           'postcss-loader',
         ],
-      }
+      },
+      {
+        exclude : [
+          /\.html$/,
+          /\.jsx?$/,
+          /\.css$/,
+        ],
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: 'data/[name].[ext]',
+        },
+      },
     ],
   },
   plugins: [

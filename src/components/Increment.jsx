@@ -4,12 +4,15 @@ import { connect } from 'react-redux';
 
 import { increment, decrement } from '../actions/incrementActions';
 
+import clashRoyale from '../images/clash-royale.png';
+
 import styles from './Increment.css';
 
 const mapState = state => state.incrementReducer;
 
 const Increment = props => (
   <div className={styles.container}>
+    <img alt="clash" src={clashRoyale} />
     {props.number}
     <button className={styles.button} onClick={() => props.onIncrement(10)}>
       Add
