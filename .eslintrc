@@ -9,6 +9,11 @@
   "globals": {
     "module": true
   },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
   "plugins": [
     "jest"
   ],
